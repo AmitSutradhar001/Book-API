@@ -12,5 +12,18 @@ This project is a basic RESTful API for managing a collection of books in a Mong
 
 ## Prerequisites
 
-- Node.js (v14 or later)
+- Node.js
+- Express - Web application framework for Node.js
 - MongoDB
+
+## installation
+
+- npm install
+
+## Use API endpoints:
+
+- GET a book by ID: GET /books/:id
+- Get all books: GET /books
+- Add a new book: POST /books
+- Update a book by ID: PUT /books/:id
+- Delete a book by ID: DELETE /books/:id
