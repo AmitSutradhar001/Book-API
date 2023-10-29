@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "acd347f1-e822-4c1a-91a8-c9c29cb4e8be",
+		"name": "Book API (localhost)",
+		"description": "This is a API created by Amit Sutradhar.\n\nThere is total five types of requests, two GET, POST, PUT, DEL.\n\nUsing all this requests we are able to extrect data from BooksDB database.\n\nThis API have a API key Authorization for security.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28456740"
+	},
+	"item": [
+		{
+			"name": "Get all books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/books",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books"
+					]
+				},
+				"description": "Using this URL request we are able to get all books from the API."
+			},
+			"response": []
+		},
+		{
+			"name": "Get book by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/books/653bcf94c14e98bbe8108af9",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						"653bcf94c14e98bbe8108af9"
+					]
+				},
+				"description": "Using this URL request we are able to get book from the API by using ID. The end point is the id of that book."
+			},
+			"response": []
+		},
+		{
+			"name": "Post a new book",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Amit@3110",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "authorization",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Bengali\",\r\n    \"author\": \"Pan\",\r\n    \"publishedYear\": 2021\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/books",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books"
+					]
+				},
+				"description": "Using this URL request we are able to post a new book in our API, and store the new book into the BookDB database.\n\nAnd we need authorization for posting new book."
+			},
+			"response": []
+		},
+		{
+			"name": "Update book by ID",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Amit@3110",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "authorization",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"English\",\r\n    \"author\": \"Amrita\",\r\n    \"publishedYear\": 2021\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/books/653bcf94c14e98bbe8108af9",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						"653bcf94c14e98bbe8108af9"
+					]
+				},
+				"description": "Using this URL request we are able to upddate a existing book in our database, using ID of that book. And we need authorization for this."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete book by ID",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Amit@3110",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "authorization",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/books/653bcf94c14e98bbe8108af9",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						"653bcf94c14e98bbe8108af9"
+					]
+				},
+				"description": "Using this URL request we are able to delete a existing book in our database by using it's ID. The end point is the ID of that book. And we need authorization for this."
+			},
+			"response": []
+		}
+	]
+}
